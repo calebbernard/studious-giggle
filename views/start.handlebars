@@ -1,0 +1,67 @@
+<h1>{{name}}</h1>
+
+<br>
+
+<form method="POST" action="create-account">
+	Create account:<br>
+	Username:
+	<input type="text" id="name" name="name" /><br>
+	Password:
+	<input type="text" id="password" name="password" /><br>
+	<input type="submit" />
+</form>
+
+<hr>
+
+<form method="POST" action="login">
+	Login:<br>
+	Username:
+	<input type="text" name="name" /><br>
+	Password:
+	<input type="text" name="password" /><br>
+	<input type="submit" />
+</form>
+
+<hr>
+
+<form method="GET" action="login">
+	Logout:<br>
+	<input type="submit" />
+</form>
+
+<hr>
+
+<form method="POST" action="data">
+	Add bird:<br>
+	Place of Bird:
+	<input type="text" name="place" /><br>
+	Name of Bird:
+	<input type="text" name="bird" /><br>
+	<input type="hidden" name="type" value="bird" />
+	<input type="submit" />
+</form>
+
+<hr>
+
+<form method="POST" action="data">
+	Change Bird Data:<br>
+	Name of bird to change:
+	<input type="text" name="bird" /><br>
+	New Place:
+	<input type="text" name="place" /><br>
+	<input type="hidden" name="method" value="PUT" />
+	<input type="submit" />
+</form>
+
+<hr>
+
+<form method="POST" action="data">
+	Delete a Bird:<br>
+	Name of bird to delete:
+	<input type="text" name="bird" /><br>
+	<input type="hidden" name="method" value="DELETE" />
+	<input type="submit" />
+<hr>
+
+Data:<br>
+{{b_data}}
